@@ -105,33 +105,33 @@ export default function TalentBenchPage() {
   return (
     <div className="min-h-screen bg-[#fcfaf8] text-[#111111]">
       {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6 border-b border-black/10">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-6 border-b border-black/10">
         <div className="max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-black/15 bg-[#f5f4ef] text-[#111111] text-xs uppercase tracking-[0.2em] font-medium">
+          <div className="inline-flex flex-wrap items-center gap-2 mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-black/15 bg-[#f5f4ef] text-[#111111] text-[10px] sm:text-xs uppercase tracking-[0.18em] font-medium">
             <span>The SLC Talent Bench</span>
             <span className="text-black/30">&bull;</span>
             <span>Executive Search &amp; GTM Recruiting</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-serif tracking-tight text-[#111111] leading-[1.06] mb-8 max-w-5xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif tracking-tight text-[#111111] leading-[1.06] mb-6 md:mb-8 max-w-5xl">
             Don&apos;t hire a resume.{' '}
             <span className="italic font-normal">Hire from my bench.</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-[#111111]/65 font-light leading-relaxed max-w-3xl mb-12">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#111111]/65 font-light leading-relaxed max-w-3xl mb-10 md:mb-12">
             A bad VP of Sales or Founding AE costs you $250,000 and 9 months of runway. We combine our dedicated full-cycle GTM recruiting team with my 392.5K B2B network—and I personally vet your finalists before you make the hire.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 md:mb-16">
             <a
               href="#portal"
-              className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.2em] font-medium text-center transition-colors"
+              className="px-6 sm:px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
             >
               Hire From The Bench (Founders &amp; VCs) &rarr;
             </a>
             <a
               href="#apply-bench"
-              className="px-8 py-4 border border-black/20 hover:border-[#111111] bg-white text-[#111111] text-xs uppercase tracking-[0.2em] font-medium text-center transition-colors"
+              className="px-6 sm:px-8 py-4 border border-black/20 hover:border-[#111111] bg-white text-[#111111] text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
             >
               Apply to Join The Bench (Candidates)
             </a>

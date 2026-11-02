@@ -6,21 +6,22 @@ export const metadata = {
 };
 
 const links = [
-  { title: "Advisory Services", url: "/advisory", type: "internal" },
-  { title: "Sponsorship & Media Kit", url: "/media", type: "internal" },
-  { title: "Book Me to Speak", url: "/speaking", type: "internal" },
-  { title: "The Leese Effect Newsletter", url: "/newsletter", type: "internal" },
-  { title: "Surf & Sales Event", url: "https://surfandsales.com", type: "external" },
+  { title: "Advisory Services ($0 → $25M)", url: "/advisory", type: "internal" },
+  { title: "The SLC Talent Bench (GTM Recruiting)", url: "/talent", type: "internal" },
+  { title: "Surf & Sales Summit & B2B Buyouts", url: "/events", type: "internal" },
+  { title: "Book Me to Speak (SKOs & Keynotes)", url: "/speaking", type: "internal" },
+  { title: "The Leese Effect (153 Field Notes)", url: "/blog", type: "internal" },
+  { title: "2026 Sponsorship & Media Kit", url: "/media", type: "internal" },
+  { title: "Podcasts (What's Your Story? + 100 Guest Eps)", url: "/podcast", type: "internal" },
+  { title: "Milos Ventures Syndicate", url: "/invest", type: "internal" },
   { title: "GetBrokerOS", url: "https://getbrokeros.ai", type: "external" },
   { title: "The Good Dog Co", url: "https://the-gooddog.co", type: "external" },
-  { title: "What's Your Story Podcast", url: "https://whatsyourstorypod.com", type: "external" },
-  { title: "Milos Ventures Syndicate", url: "https://venture.angellist.com/v/milosventures/syndicate", type: "external" },
 ];
 
 const books = [
-  { title: "Addicted to the Process", url: "https://www.amazon.com/dp/B07DKFNPRX" },
-  { title: "From Rep to Manager", url: "https://www.amazon.com/dp/B09TZZN1N7" },
-  { title: "More Than a Number", url: "https://www.amazon.com/dp/B0D1J9GPN4" },
+  { title: "Addicted to the Process", url: "https://www.amazon.com/Addicted-Process-Transactional-Confidence-Consistency-ebook/dp/B071SB4FZN" },
+  { title: "From Rep to Manager", url: "https://www.amazon.com/Rep-Manager-Guide-Taking-Leadership-ebook/dp/B08R6G19LZ" },
+  { title: "More Than a Number: Modern VP Sales Playbook", url: "https://www.amazon.com/More-Than-Number-Modern-Playbook/dp/0998405493/" },
 ];
 
 export default function LinksPage() {

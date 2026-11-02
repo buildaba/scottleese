@@ -46,7 +46,7 @@ export default function BlogArchiveClient({ articles }: { articles: Article[] })
       <div className="mb-12 flex flex-col gap-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap gap-2 -mx-6 px-6 sm:mx-0 sm:px-0 no-scrollbar">
             {CATEGORIES.map((cat) => {
               const count =
                 cat === 'All'
@@ -61,7 +61,7 @@ export default function BlogArchiveClient({ articles }: { articles: Article[] })
                     setSelectedCategory(cat);
                     setVisibleCount(24);
                   }}
-                  className={`px-3.5 py-2 text-xs uppercase tracking-[0.15em] font-medium border transition-colors cursor-pointer ${
+                  className={`px-3.5 py-2 text-xs uppercase tracking-[0.15em] font-medium border transition-colors cursor-pointer shrink-0 ${
                     isActive
                       ? 'bg-[#111111] text-white border-[#111111]'
                       : 'bg-[#fcfaf8] text-[#111111]/70 border-black/10 hover:border-black/30 hover:text-[#111111]'
@@ -171,7 +171,7 @@ export default function BlogArchiveClient({ articles }: { articles: Article[] })
                 <Link
                   href={`/blog/${post.slug}`}
                   key={post.slug}
-                  className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between group hover:bg-[#f5f4ef] transition-colors"
+                  className="bg-[#fcfaf8] p-7 sm:p-10 md:p-12 flex flex-col justify-between group hover:bg-[#f5f4ef] transition-colors"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-6">

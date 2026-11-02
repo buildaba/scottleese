@@ -208,12 +208,12 @@ export default function AdvisoryPage() {
   return (
     <div className="min-h-screen bg-[#fcfaf8] text-[#111111] font-sans">
       {/* Hero Section */}
-      <section className="pt-40 pb-20 md:pt-48 md:pb-24 px-6">
+      <section className="pt-32 pb-16 md:pt-48 md:pb-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block mb-8 px-4 py-1.5 rounded-full border border-black/10 text-[#111111]/70 text-sm font-medium tracking-wide">
+          <div className="inline-block mb-6 md:mb-8 px-4 py-1.5 rounded-full border border-black/10 text-[#111111]/70 text-xs sm:text-sm font-medium tracking-wide">
             Scott Leese Consulting
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif tracking-tight mb-8 leading-[1.08] text-[#111111]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif tracking-tight mb-6 md:mb-8 leading-[1.08] text-[#111111]">
             12 Unicorns &amp; 15 Exits.
             <br />
             <span className="text-[#111111]/60 italic font-light">Can your GTM advisor say that?</span>
@@ -611,18 +611,23 @@ export default function AdvisoryPage() {
       </section>
 
       {/* Full Feature Comparison Matrix (Ported from scottleeseconsulting.com/working-with-us) */}
-      <section id="plans" className="py-24 border-t border-black/10 px-6 scroll-mt-20">
+      <section id="plans" className="py-20 md:py-24 border-t border-black/10 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/40 font-medium mb-3">
-              Compare All Features
+          <div className="mb-8 md:mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/40 font-medium mb-3">
+                Compare All Features
+              </div>
+              <h2 className="text-3xl md:text-5xl font-serif tracking-tight text-[#111111]">
+                What You Get in Every Plan
+              </h2>
             </div>
-            <h2 className="text-3xl md:text-5xl font-serif tracking-tight text-[#111111]">
-              What You Get in Every Plan
-            </h2>
+            <div className="md:hidden text-[11px] uppercase tracking-[0.15em] text-[#111111]/50 font-medium">
+              Swipe table horizontally &rarr;
+            </div>
           </div>
 
-          <div className="overflow-x-auto border border-black/10 bg-white">
+          <div className="overflow-x-auto border border-black/10 bg-white -mx-2 sm:mx-0">
             <table className="w-full text-left border-collapse min-w-[720px]">
               <thead>
                 <tr className="border-b border-black/10 bg-[#fcfaf8]">

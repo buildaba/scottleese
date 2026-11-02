@@ -5,16 +5,16 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full bg-[#fcfaf8] text-[#111111]">
       {/* Hero Section */}
-      <section className="pt-40 pb-24 md:pt-56 md:pb-32 px-6">
+      <section className="pt-32 pb-20 md:pt-56 md:pb-32 px-6">
         <div className="container mx-auto max-w-5xl">
-          <h1 className="text-6xl md:text-[7rem] font-serif tracking-tight mb-8 leading-[1.05] text-[#111111]">
+          <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-serif tracking-tight mb-6 md:mb-8 leading-[1.06] text-[#111111]">
             I take startups from zero to $25M.
           </h1>
-          <p className="text-xl md:text-3xl text-[#111111]/60 mb-16 max-w-3xl leading-relaxed font-light tracking-tight">
+          <p className="text-lg sm:text-xl md:text-3xl text-[#111111]/60 mb-12 md:mb-16 max-w-3xl leading-relaxed font-light tracking-tight">
             Strategic GTM + RevOps Advisor to <span className="text-[#111111] font-medium">200+</span> companies, including <span className="text-[#111111] font-medium">12 unicorns</span> and <span className="text-[#111111] font-medium">15 exits</span>.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-24 w-full sm:w-auto items-start">
+          <div className="flex flex-col sm:flex-row gap-4 mb-16 md:mb-24 w-full sm:w-auto items-start">
             <Link 
               href="/advisory" 
               className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium rounded-md text-lg transition-colors w-full sm:w-auto text-center"
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
 
           {/* Minimalist Stats Bar */}
-          <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-y-12 gap-x-8 py-10 border-y border-black/10">
+          <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-6 py-8 md:py-10 border-y border-black/10">
             {[
               { val: "392.5K", label: "Followers" },
               { val: "200+", label: "Companies" },
@@ -39,8 +39,8 @@ export default function Home() {
               { val: "3", label: "Bestsellers" }
             ].map((stat, i) => (
               <div key={i} className={`flex flex-col ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}>
-                <span className="text-4xl md:text-5xl font-serif text-[#111111] mb-2">{stat.val}</span>
-                <span className="text-[0.7rem] uppercase tracking-[0.15em] text-[#111111]/50 font-medium">{stat.label}</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#111111] mb-1.5">{stat.val}</span>
+                <span className="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.15em] text-[#111111]/50 font-medium">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -48,11 +48,11 @@ export default function Home() {
       </section>
 
       {/* "My Worlds" Section */}
-      <section className="py-24 border-t border-black/10">
+      <section className="py-16 md:py-24 border-t border-black/10">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111] mb-16">What I Do</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif tracking-tight text-[#111111] mb-10 md:mb-16">What I Do</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/10 border border-black/10">
             {[
               { href: "/advisory", title: "Advisory", desc: "Fractional CRO & GTM strategy for startups scaling to $25M." },
               { href: "/talent", title: "The SLC Talent Bench", desc: "30-day GTM hiring sprints for Founding AEs & VPs of Sales—vetted by Scott." },
@@ -61,12 +61,12 @@ export default function Home() {
               { href: "/invest", title: "Investing", desc: "Milos Ventures — backing AI, robotics, defense & energy." },
               { href: "/media", title: "Creator & Podcast", desc: "392.5K followers + What's Your Story. B2B brand partnerships." }
             ].map((card, i) => (
-              <Link key={i} href={card.href} className="group bg-[#fcfaf8] p-12 hover:bg-[#f5f4ef] transition-colors flex flex-col h-full">
-                <h3 className="text-3xl font-serif mb-4 flex items-center justify-between text-[#111111]">
+              <Link key={i} href={card.href} className="group bg-[#fcfaf8] p-7 sm:p-10 md:p-12 hover:bg-[#f5f4ef] transition-colors flex flex-col h-full">
+                <h3 className="text-2xl sm:text-3xl font-serif mb-3 md:mb-4 flex items-center justify-between text-[#111111]">
                   {card.title}
-                  <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out text-[#d9534f]">→</span>
+                  <span className="opacity-100 md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-out text-[#d9534f]">→</span>
                 </h3>
-                <p className="text-[#111111]/60 leading-relaxed font-light mt-auto text-lg">
+                <p className="text-[#111111]/60 leading-relaxed font-light mt-auto text-base sm:text-lg">
                   {card.desc}
                 </p>
               </Link>

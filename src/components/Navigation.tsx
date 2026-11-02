@@ -75,13 +75,13 @@ export default function Navigation() {
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#fcfaf8] border-b border-black/5 p-6 flex flex-col gap-4 shadow-xl">
-          <ul className="flex flex-col gap-2">
+        <div className="md:hidden absolute top-full left-0 w-full max-h-[calc(100dvh-76px)] overflow-y-auto bg-[#fcfaf8] border-b border-black/10 px-6 py-6 flex flex-col gap-3 shadow-xl">
+          <ul className="grid grid-cols-1 gap-1">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-lg font-medium text-[#111111]/80 hover:text-[#111111] py-3 block"
+                  className="text-base font-medium text-[#111111]/80 hover:text-[#111111] py-2.5 border-b border-black/5 block"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -91,7 +91,7 @@ export default function Navigation() {
           </ul>
           <Link
             href="/advisory"
-            className="bg-[#111111] text-white px-6 py-4 rounded-md font-medium text-center mt-4"
+            className="bg-[#111111] text-white px-6 py-3.5 rounded-md font-medium text-center mt-2 text-sm uppercase tracking-[0.15em]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Work With Me
