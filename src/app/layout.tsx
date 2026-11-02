@@ -61,6 +61,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://scottleese.com",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
