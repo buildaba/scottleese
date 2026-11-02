@@ -526,7 +526,7 @@ export default function AdvisoryPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#111111] text-white text-[11px] uppercase tracking-[0.18em] mb-4">
-                  <span>Standalone 30-Day Hiring Sprint or Plan Add-On</span>
+                  <span>Curated GTM Talent Network &amp; Search</span>
                   <span className="text-white/40">•</span>
                   <span>The SLC Talent Bench</span>
                 </div>
@@ -534,20 +534,20 @@ export default function AdvisoryPage() {
                   Don&apos;t Hire a Resume. Hire From The SLC Talent Bench.
                 </h3>
                 <p className="text-[#111111]/70 font-light leading-relaxed mb-6 text-lg">
-                  Most recruiters don&apos;t know how to vet quota-carrying salespeople. Through <strong>The SLC Talent Bench</strong>—our dedicated GTM recruiting and executive search division—we handle 100% of the headhunting (outbound sourcing, rigorous screening, and warm bench matching from Scott&apos;s 134K+ LinkedIn network) while <strong>Scott Leese defines your role scorecard and personally conducts the final-round Bar-Raiser interview</strong> before you extend an offer.
+                  Every week, top-performing Founding AEs, RevOps architects, and VPs of Sales across Scott&apos;s 392.5K+ B2B ecosystem reach out looking for their next startup. Through <strong>The SLC Talent Bench</strong>, we connect founders directly with stage-matched operators from our private talent pool and targeted GTM search.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-black/10 text-sm">
                   <div>
-                    <div className="font-medium text-[#111111]">Roles We Place</div>
+                    <div className="font-medium text-[#111111]">Roles We Connect</div>
                     <div className="text-[#111111]/60 font-light">Founding AEs, Enterprise AEs, SDR Leaders, RevOps &amp; First VPs of Sales</div>
                   </div>
                   <div>
                     <div className="font-medium text-[#111111]">How It Works</div>
-                    <div className="text-[#111111]/60 font-light">SLC Talent Bench sources &amp; screens → Scott vets finalists → You hire</div>
+                    <div className="text-[#111111]/60 font-light">Share your role &amp; stage → Curated bench matching &amp; search → Warm intros</div>
                   </div>
                   <div>
-                    <div className="font-medium text-[#111111]">For Starter &amp; RevOps Clients</div>
-                    <div className="text-[#111111]/60 font-light">Plug-and-play hiring execution without upgrading to a 6-month plan</div>
+                    <div className="font-medium text-[#111111]">Flexible Engagement</div>
+                    <div className="text-[#111111]/60 font-light">Available standalone or paired with any Advisory retainer</div>
                   </div>
                 </div>
               </div>
@@ -556,10 +556,10 @@ export default function AdvisoryPage() {
                   The SLC Talent Bench
                 </div>
                 <div className="text-2xl font-serif text-[#111111] mb-2">
-                  30-Day Hiring Sprint
+                  Curated GTM Recruiting
                 </div>
                 <p className="text-xs text-[#111111]/60 font-light mb-6">
-                  Includes role scorecard calibration, vetted candidate shortlist in 14 days, final-round Scott Leese assessment &amp; replacement guarantee.
+                  Connect directly with vetted operators across Scott&apos;s 134K+ LinkedIn network, Surf &amp; Sales alumni, and Thursday Night Sales community.
                 </p>
                 <div className="flex flex-col gap-3">
                   <Link

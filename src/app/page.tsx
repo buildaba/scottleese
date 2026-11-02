@@ -55,7 +55,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-black/10 border border-black/10">
             {[
               { href: "/advisory", title: "Advisory", desc: "Fractional CRO & GTM strategy for startups scaling to $25M." },
-              { href: "/talent", title: "The SLC Talent Bench", desc: "30-day GTM hiring sprints for Founding AEs & VPs of Sales—vetted by Scott." },
+              { href: "/talent", title: "The SLC Talent Bench", desc: "Curated GTM talent network & search for Founding AEs, RevOps & VPs of Sales." },
               { href: "/speaking", title: "Speaking", desc: "Keynotes on sales, resilience, and modern GTM." },
               { href: "/events", title: "Events", desc: "Surf & Sales — executive retreats & corporate cohort buyouts." },
               { href: "/invest", title: "Investing", desc: "Milos Ventures — backing AI, robotics, defense & energy." },

@@ -6,7 +6,7 @@ const INTEREST_OPTIONS = [
   { id: "starter", label: "Coaching & Advisory Plan", sub: "$3,000/mo • Scott Leese" },
   { id: "revops", label: "RevOps Plan", sub: "$5,000/mo • JM Wilke" },
   { id: "complete", label: "Complete Fractional GTM", sub: "$10,000/mo • Scott & JM" },
-  { id: "recruiting", label: "The SLC Talent Bench (GTM Recruiting)", sub: "30-Day Hiring Sprint • Scott-Vetted Reps & VPs" },
+  { id: "recruiting", label: "The SLC Talent Bench (GTM Recruiting)", sub: "Curated Network Matchmaking • Founding AEs, RevOps & VPs" },
   { id: "surf-b2b", label: "Surf & Sales B2B Retreat Buyout", sub: "Full Cohort or Team Seats" },
   { id: "training", label: "SKO / Keynote / Sales Training", sub: "Live or Virtual Event" },
   { id: "podcast-media", label: "Creator / Podcast Sponsorship", sub: "392.5K Audience Reach" },

@@ -108,7 +108,7 @@ export default function TalentPortalForms() {
           </div>
           <div className="text-2xl font-serif">Hire From The SLC Talent Bench</div>
           <div className="text-xs font-light opacity-75 mt-2">
-            Launch a 30-day search sprint or request introductions to vetted AEs &amp; VPs of Sales.
+            Request warm introductions to vetted AEs, RevOps &amp; VPs of Sales from our network.
           </div>
         </button>
 
@@ -123,11 +123,11 @@ export default function TalentPortalForms() {
           }`}
         >
           <div className="text-[0.65rem] uppercase tracking-[0.2em] font-semibold opacity-70 mb-2">
-            Door 02 &bull; For Top 5% GTM Operators &amp; Sellers
+            Door 02 &bull; For GTM Operators &amp; Sellers
           </div>
           <div className="text-2xl font-serif">Apply to Join The SLC Talent Bench</div>
           <div className="text-xs font-light opacity-75 mt-2">
-            Get vetted once and matched confidentially with Scott&apos;s 200+ startup &amp; VC network.
+            Join the confidential talent pool and get matched with high-growth startups in Scott&apos;s network.
           </div>
         </button>
       </div>
@@ -138,13 +138,13 @@ export default function TalentPortalForms() {
           employerSuccess ? (
             <div className="py-12 text-center max-w-xl mx-auto">
               <div className="inline-block px-3 py-1 border border-black/15 text-xs uppercase tracking-[0.2em] text-[#111111]/60 mb-4">
-                Hiring Brief Received
+                Hiring Request Received
               </div>
               <h3 className="text-3xl font-serif text-[#111111] mb-4">
-                Your SLC Talent Bench request is in motion.
+                Your SLC Talent Bench request has been received.
               </h3>
               <p className="text-[#111111]/65 font-light mb-8">
-                Our GTM recruiting team and Scott Leese will review your role profile, check current warm matches on the bench, and reach out within 24 hours to lock in your scorecard calibration call.
+                Our team will review your role details against current operators in our network and follow up with next steps.
               </p>
               <button
                 type="button"
@@ -161,10 +161,10 @@ export default function TalentPortalForms() {
             <form onSubmit={handleEmployerSubmit} className="space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-serif text-[#111111] mb-2">
-                  Request a 30-Day Hiring Sprint or Bench Match
+                  Tell Us Who You&apos;re Looking to Hire
                 </h3>
                 <p className="text-sm text-[#111111]/60 font-light">
-                  Tell us who you need to hire. We&apos;ll match you against active candidates on The SLC Talent Bench and launch targeted headhunting calibrated by Scott Leese.
+                  Share your stage, deal size, and the roles you&apos;re hiring for so we can match you with operators from The SLC Talent Bench.
                 </p>
               </div>
 
