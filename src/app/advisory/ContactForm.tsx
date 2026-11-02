@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 const INTEREST_OPTIONS = [
-  { id: "diagnostic", label: "72-Hour GTM & Hiring Readiness Audit", sub: "$2,500 Flat • Diagnostic + 90-Day Plan" },
   { id: "starter", label: "Coaching & Advisory Plan", sub: "$3,000/mo • Scott Leese" },
   { id: "revops", label: "RevOps Plan", sub: "$5,000/mo • JM Wilke" },
   { id: "complete", label: "Complete Fractional GTM", sub: "$10,000/mo • Scott & JM" },

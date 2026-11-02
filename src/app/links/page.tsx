@@ -79,11 +79,12 @@ export default function LinksPage() {
         </div>
 
         {/* Socials */}
-        <div className="flex justify-center gap-6 pt-8 border-t border-black/10">
-          <a href="https://linkedin.com/in/scottleese" className="text-[#111111]/50 hover:text-[#111111]">LinkedIn</a>
-          <a href="https://instagram.com/thescottleese" className="text-[#111111]/50 hover:text-[#111111]">Instagram</a>
-          <a href="https://tiktok.com/@therealscottleese" className="text-[#111111]/50 hover:text-[#111111]">TikTok</a>
-          <a href="https://twitter.com/thescottleese" className="text-[#111111]/50 hover:text-[#111111]">X</a>
+        <div className="flex flex-wrap justify-center gap-6 pt-8 border-t border-black/10 text-sm">
+          <a href="https://www.linkedin.com/in/scottleese/" target="_blank" rel="noopener noreferrer" className="text-[#111111]/60 hover:text-[#111111]">LinkedIn</a>
+          <a href="https://www.instagram.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/60 hover:text-[#111111]">Instagram</a>
+          <a href="https://www.tiktok.com/@therealscottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/60 hover:text-[#111111]">TikTok</a>
+          <a href="https://www.youtube.com/@thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/60 hover:text-[#111111]">YouTube</a>
+          <a href="https://x.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/60 hover:text-[#111111]">X</a>
         </div>
       </div>
     </div>

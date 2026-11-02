@@ -396,44 +396,15 @@ export default function AdvisoryPage() {
         </div>
       </section>
 
-      {/* Transparent Pricing Section + The SLC Talent Bench & Diagnostic Wedge */}
+      {/* Transparent Pricing Section + The SLC Talent Bench */}
       <section id="pricing" className="py-24 border-t border-black/10 px-6 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/40 font-medium mb-3">Working With Us</div>
             <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-4 text-[#111111]">Plans &amp; Pricing</h2>
             <p className="text-xl text-[#111111]/60 font-light">
-              Transparent monthly retainers. Start with a 72-hour diagnostic, pick the advisory tier that fits your stage, or hire directly from The SLC Talent Bench.
+              Transparent monthly retainers. Pick the advisory tier that fits your stage, or hire directly from The SLC Talent Bench.
             </p>
-          </div>
-
-          {/* Low-Friction Wedge: $2,500 72-Hour GTM & Hiring Readiness Diagnostic */}
-          <div className="mb-10 border border-black/15 bg-white p-8 md:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f5f4ef] border border-black/10 text-[#111111] text-[11px] uppercase tracking-[0.18em] font-medium mb-3">
-                <span>Fast-Track Entry Wedge</span>
-                <span className="text-black/30">•</span>
-                <span>No Multi-Month Commitment Required</span>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-serif text-[#111111] mb-2">
-                72-Hour GTM &amp; VP of Sales Readiness Diagnostic
-              </h3>
-              <p className="text-[#111111]/65 font-light leading-relaxed text-sm md:text-base">
-                Not sure if you&apos;re ready to hire a VP of Sales, need 2 Founding AEs first, or need to fix your outbound and CRM pipeline before adding headcount? We audit your ICP, call recordings, comp plan, and conversion funnel and deliver a written <strong>90-Day GTM &amp; Hiring Blueprint + 1:1 Readout Call</strong>. (100% credited toward any retainer or search within 30 days.)
-              </p>
-            </div>
-            <div className="shrink-0 flex flex-col sm:flex-row lg:flex-col items-start sm:items-center lg:items-end justify-between gap-4 border-t lg:border-t-0 pt-4 lg:pt-0 border-black/10">
-              <div className="lg:text-right">
-                <div className="text-3xl md:text-4xl font-serif text-[#111111]">$2,500</div>
-                <div className="text-xs text-[#111111]/50 font-light">One-time flat fee • 72-hr turnaround</div>
-              </div>
-              <Link
-                href="#contact"
-                className="px-6 py-3 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors"
-              >
-                Book 72-Hr Audit →
-              </Link>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">

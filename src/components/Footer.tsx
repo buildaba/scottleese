@@ -20,31 +20,33 @@ export default function Footer() {
           <div>
             <h3 className="font-medium text-[#111111]/40 mb-6 uppercase tracking-[0.2em] text-[0.7rem]">Work</h3>
             <ul className="flex flex-col gap-4">
-              <li><Link href="/advisory" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Advisory</Link></li>
+              <li><Link href="/advisory" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Advisory &amp; RevOps</Link></li>
               <li><Link href="/talent" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">The SLC Talent Bench</Link></li>
-              <li><Link href="/speaking" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Speaking</Link></li>
-              <li><Link href="/events" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Events</Link></li>
+              <li><Link href="/speaking" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Speaking &amp; SKOs</Link></li>
+              <li><Link href="/events" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Surf &amp; Sales Events</Link></li>
+              <li><Link href="/invest" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Milos Ventures</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-medium text-[#111111]/40 mb-6 uppercase tracking-[0.2em] text-[0.7rem]">Content</h3>
+            <h3 className="font-medium text-[#111111]/40 mb-6 uppercase tracking-[0.2em] text-[0.7rem]">Content &amp; Media</h3>
             <ul className="flex flex-col gap-4">
-              <li><Link href="/podcast" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Podcast</Link></li>
-              <li><Link href="/newsletter" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Newsletter</Link></li>
+              <li><Link href="/blog" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Field Notes (153 Essays)</Link></li>
+              <li><Link href="/newsletter" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">The Leese Effect Newsletter</Link></li>
+              <li><Link href="/podcast" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Podcasts</Link></li>
               <li><Link href="/books" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Books</Link></li>
-              <li><Link href="/blog" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/media" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Sponsor &amp; Media Kit</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-medium text-[#111111]/40 mb-6 uppercase tracking-[0.2em] text-[0.7rem]">Connect</h3>
             <ul className="flex flex-col gap-4">
-              <li><a href="https://linkedin.com/in/scottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">LinkedIn</a></li>
-              <li><a href="https://instagram.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Instagram</a></li>
-              <li><a href="https://tiktok.com/@thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">TikTok</a></li>
-              <li><a href="https://youtube.com/@scottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">YouTube</a></li>
-              <li><a href="https://twitter.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">X</a></li>
+              <li><a href="https://www.linkedin.com/in/scottleese/" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">Instagram</a></li>
+              <li><a href="https://www.tiktok.com/@therealscottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">TikTok</a></li>
+              <li><a href="https://www.youtube.com/@thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">YouTube</a></li>
+              <li><a href="https://x.com/thescottleese" target="_blank" rel="noopener noreferrer" className="text-[#111111]/70 hover:text-[#111111] transition-colors text-sm">X</a></li>
             </ul>
           </div>
         </div>

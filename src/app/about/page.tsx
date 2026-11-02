@@ -59,6 +59,22 @@ export default function AboutPage() {
                   Instagram ↗
                 </a>
                 <a
+                  href="https://www.tiktok.com/@therealscottleese"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#111111]/60 hover:text-[#111111] transition-colors"
+                >
+                  TikTok ↗
+                </a>
+                <a
+                  href="https://www.youtube.com/@thescottleese"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#111111]/60 hover:text-[#111111] transition-colors"
+                >
+                  YouTube ↗
+                </a>
+                <a
                   href="https://x.com/thescottleese"
                   target="_blank"
                   rel="noreferrer"

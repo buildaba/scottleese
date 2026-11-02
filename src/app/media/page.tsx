@@ -79,76 +79,122 @@ export default function MediaPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black/10 border border-black/10">
           {/* Instagram */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="https://www.instagram.com/thescottleese"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">Instagram</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>Instagram</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">↗</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">@thescottleese</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-serif tracking-tight text-[#111111] mb-2">213K</div>
               <div className="text-[#111111]/50 font-light">Followers</div>
             </div>
-          </div>
+          </a>
 
           {/* LinkedIn */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="https://www.linkedin.com/in/scottleese/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">LinkedIn</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>LinkedIn</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">↗</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">linkedin.com/in/scottleese</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-serif tracking-tight text-[#111111] mb-2">134K</div>
               <div className="text-[#111111]/50 font-light">Followers</div>
             </div>
-          </div>
+          </a>
 
           {/* TikTok */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="https://www.tiktok.com/@therealscottleese"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">TikTok</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>TikTok</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">↗</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">@therealscottleese</div>
             </div>
             <div>
               <div className="text-5xl md:text-6xl font-serif tracking-tight text-[#111111] mb-2">31K</div>
               <div className="text-[#111111]/50 font-light">Followers</div>
             </div>
-          </div>
+          </a>
 
           {/* X */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="https://x.com/thescottleese"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">X (Twitter)</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>X (Twitter)</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">↗</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">@thescottleese</div>
             </div>
             <div>
               <div className="text-5xl font-serif tracking-tight text-[#111111] mb-2">7.6K</div>
               <div className="text-[#111111]/50 font-light">Followers</div>
             </div>
-          </div>
+          </a>
 
           {/* Newsletter */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="/newsletter"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">Newsletter</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>Newsletter</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">→</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">The Leese Effect</div>
             </div>
             <div>
               <div className="text-5xl font-serif tracking-tight text-[#111111] mb-2">4.5K</div>
               <div className="text-[#111111]/50 font-light">Subscribers • 20% Open Rate</div>
             </div>
-          </div>
+          </a>
 
           {/* YouTube */}
-          <div className="bg-[#fcfaf8] p-10 md:p-12 flex flex-col justify-between">
+          <a
+            href="https://www.youtube.com/@thescottleese"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#fcfaf8] hover:bg-[#f5f4ef] transition-colors p-10 md:p-12 flex flex-col justify-between group"
+          >
             <div>
-              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1">YouTube</div>
+              <div className="text-xs font-medium text-[#111111]/50 tracking-[0.2em] uppercase mb-1 flex items-center justify-between">
+                <span>YouTube</span>
+                <span className="text-[#111111]/30 group-hover:text-[#d9534f] transition-colors">↗</span>
+              </div>
               <div className="text-lg font-medium text-[#111111] mb-10">@thescottleese</div>
             </div>
             <div>
               <div className="text-5xl font-serif tracking-tight text-[#111111] mb-2">2.4K</div>
               <div className="text-[#111111]/50 font-light">Subscribers</div>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 

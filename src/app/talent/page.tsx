@@ -376,42 +376,42 @@ export default function TalentBenchPage() {
             <div className="bg-white border border-black/10 p-8 flex flex-col justify-between">
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/45 font-medium mb-2">
-                  Option 01 &bull; Diagnostic First
+                  Option 01 &bull; Single Role Search
                 </div>
                 <h3 className="text-2xl font-serif text-[#111111] mb-3">
-                  72-Hr Hiring Readiness Audit
+                  Founding AE / RevOps Sprint
                 </h3>
-                <div className="text-3xl font-serif text-[#111111] mb-4">$2,500 Flat</div>
+                <div className="text-3xl font-serif text-[#111111] mb-4">IC &amp; Operator Roles</div>
                 <p className="text-sm text-[#111111]/65 font-light leading-relaxed mb-6">
-                  Not sure whether you need a First VP of Sales, 2 Founding AEs, or a Fractional CRO first? We audit your pipeline, ICP, and comp model and hand you a written 90-day hiring blueprint. (100% credited if you launch a search within 30 days.)
+                  Need your first 1–3 Founding AEs, Senior Enterprise AEs, SDR Manager, or Head of RevOps? We define the role scorecard with Scott, source and screen quota-verified builders, and deliver a vetted shortlist in 14 days.
                 </p>
               </div>
               <a
                 href="#portal"
                 className="block w-full py-3.5 px-4 border border-black/20 hover:border-[#111111] text-center text-xs uppercase tracking-[0.2em] font-medium text-[#111111] transition-colors"
               >
-                Book 72-Hr Audit
+                Hire AEs / RevOps &rarr;
               </a>
             </div>
 
             <div className="bg-[#111111] text-white border border-[#111111] p-8 flex flex-col justify-between">
               <div>
                 <div className="text-xs uppercase tracking-[0.2em] text-white/60 font-medium mb-2">
-                  Option 02 &bull; Most Popular
+                  Option 02 &bull; Executive Search
                 </div>
                 <h3 className="text-2xl font-serif text-white mb-3">
-                  30-Day Executive / AE Hiring Sprint
+                  First VP of Sales / CRO Sprint
                 </h3>
-                <div className="text-3xl font-serif text-white mb-4">Single Role or Pod</div>
+                <div className="text-3xl font-serif text-white mb-4">Leadership Search</div>
                 <p className="text-sm text-white/75 font-light leading-relaxed mb-6">
-                  Full-cycle headhunting and warm bench matching for Founding AEs, Enterprise AEs, RevOps, or your First VP of Sales. Includes Scott Leese scorecard calibration, 14-day shortlist, final-round Bar-Raiser interview with Scott, and 90-day replacement guarantee.
+                  Graduating from founder-led sales? We run full-cycle headhunting and warm bench matching for your First VP of Sales or Scale CRO—complete with Scott Leese scorecard calibration, final-round Bar-Raiser assessment, and 90-day replacement guarantee.
                 </p>
               </div>
               <a
                 href="#portal"
                 className="block w-full py-3.5 px-4 bg-white text-[#111111] hover:bg-white/90 text-center text-xs uppercase tracking-[0.2em] font-medium transition-colors"
               >
-                Launch 30-Day Sprint &rarr;
+                Launch Executive Search &rarr;
               </a>
             </div>
 
@@ -421,11 +421,11 @@ export default function TalentBenchPage() {
                   Option 03 &bull; All-In Turnkey
                 </div>
                 <h3 className="text-2xl font-serif text-[#111111] mb-3">
-                  Advisory + Embedded Recruiting
+                  Complete Advisory + Recruiting
                 </h3>
-                <div className="text-3xl font-serif text-[#111111] mb-4">Retainer + Bench</div>
+                <div className="text-3xl font-serif text-[#111111] mb-4">Starting at $10,000/mo</div>
                 <p className="text-sm text-[#111111]/65 font-light leading-relaxed mb-6">
-                  Pair any SLC Advisory or RevOps retainer ($3K / $5K / $10K/mo) with ongoing team building. We build your playbooks and CRM architecture while hiring, onboarding, and coaching the reps who execute it.
+                  Included inside our Complete Plan ($10K/mo) or added onto our Starter ($3K/mo) and RevOps ($5K/mo) retainers. We build your playbooks and CRM architecture while hiring, onboarding, and coaching the reps who execute it.
                 </p>
               </div>
               <Link

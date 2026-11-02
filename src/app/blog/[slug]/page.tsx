@@ -248,26 +248,22 @@ export default async function BlogPostPage({
 
               <div className="space-y-3 mb-6 text-xs border-y border-black/10 py-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-[#111111]/70">72-Hr GTM &amp; Hiring Audit</span>
-                  <span className="font-medium text-[#111111]">$2,500 Flat</span>
-                </div>
-                <div className="flex items-center justify-between">
                   <span className="text-[#111111]/70">Starter Advisory</span>
-                  <span className="font-medium text-[#111111]">$3,000/mo</span>
+                  <span className="font-medium text-[#111111]">Starting at $3,000/mo</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#111111]/70">Advisory + RevOps</span>
-                  <span className="font-medium text-[#111111]">$5,000/mo</span>
+                  <span className="text-[#111111]/70">RevOps Plan</span>
+                  <span className="font-medium text-[#111111]">Starting at $5,000/mo</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#111111]/70">Complete Fractional CRO</span>
-                  <span className="font-medium text-[#111111]">$10,000/mo</span>
+                  <span className="text-[#111111]/70">Complete Plan</span>
+                  <span className="font-medium text-[#111111]">Starting at $10,000/mo</span>
                 </div>
                 <div className="flex items-center justify-between pt-2 border-t border-black/5">
                   <Link href="/talent" className="text-[#d9534f] font-medium hover:underline">
                     + The SLC Talent Bench
                   </Link>
-                  <span className="font-medium text-[#111111]">30-Day Sprint</span>
+                  <span className="font-medium text-[#111111]">GTM Recruiting</span>
                 </div>
               </div>
 
