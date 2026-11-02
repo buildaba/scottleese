@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, serif;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-accent: var(--accent);
+  --color-accent-blue: var(--accent-blue);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-card-hover: var(--card-hover);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 55s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-33.333333%); }
+  }
+
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-33.333333%); }
+    100% { transform: translateX(0%); }
   }
 }
 
+:root {
+  /* Anthropic-style paper matte light theme */
+  --background: #fcfaf8; 
+  --foreground: #111111;
+  
+  --accent: #d9534f;
+  --accent-blue: #3b82f6;
+  
+  --muted: rgba(0, 0, 0, 0.6);
+  --card: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover: #faf9f6;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #e0dcd0;
+  color: #111111;
+}
+
+/* Base custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Editorial rich-text styling for Scott Leese's articles */
+.article-prose {
+  color: #111111;
+  font-size: 1.125rem;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+.article-prose p {
+  margin-bottom: 1.65rem;
+  color: rgba(17, 17, 17, 0.85);
+}
+
+.article-prose h2 {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-size: 1.875rem;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #111111;
+  margin-top: 2.75rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.article-prose h3,
+.article-prose h4 {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #111111;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: #111111;
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.article-prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.article-prose li {
+  margin-bottom: 0.85rem;
+  color: rgba(17, 17, 17, 0.85);
+  padding-left: 0.25rem;
+}
+
+.article-prose a {
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(17, 17, 17, 0.35);
+  font-weight: 500;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.article-prose a:hover {
+  color: #d9534f;
+  text-decoration-color: #d9534f;
+}
+
+.article-prose blockquote {
+  border-left: 2px solid #111111;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: #111111;
+  background-color: #f5f4ef;
+  padding: 1.5rem;
+}
+
+.article-prose figure,
+.article-prose img {
+  margin: 2rem 0;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
