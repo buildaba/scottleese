@@ -6,6 +6,7 @@ import appearancesData from "@/data/podcast_appearances.json";
 interface PodcastAppearance {
   title: string;
   show: string;
+  guests?: string;
   audioUrl: string;
   imageUrl: string;
 }
@@ -20,15 +21,17 @@ export default function PodcastPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [visibleAppearances, setVisibleAppearances] = useState(18);
+  const [visibleAppearances, setVisibleAppearances] = useState(24);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeEpisode, setActiveEpisode] = useState<PodcastAppearance | null>(null);
 
   const filteredAppearances = ALL_APPEARANCES.filter((item) => {
     if (!searchQuery.trim()) return true;
     const q = searchQuery.toLowerCase();
     return (
       item.title.toLowerCase().includes(q) ||
-      item.show.toLowerCase().includes(q)
+      item.show.toLowerCase().includes(q) ||
+      (item.guests && item.guests.toLowerCase().includes(q))
     );
   });
 
@@ -54,35 +57,35 @@ export default function PodcastPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fcfaf8] text-[#111111]">
+    <div className="min-h-screen bg-[#fcfaf8] text-[#111111] pb-24">
       {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center">
         <div className="inline-block mb-8 px-4 py-1.5 rounded-full border border-black/10 text-[#111111]/70 text-sm font-medium tracking-wide">
-          Shows Hosted &amp; 100+ Guest Appearances
+          Shows Hosted &amp; 100 Guest Appearances
         </div>
         <h1 className="text-5xl md:text-7xl font-serif tracking-tight mb-8 leading-[1.08]">
           One of the Most Prolific Podcasters in Sales.
         </h1>
         <p className="text-xl md:text-2xl text-[#111111]/60 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-          Co-host of <strong>What&apos;s Your Story?</strong> (with Mike Lindstrom) and <strong>The Surf &amp; Sales Podcast</strong> (with Richard Harris)—plus 100+ featured guest appearances across the world&apos;s top GTM and leadership shows.
+          Co-host of <strong>What&apos;s Your Story?</strong> (with Mike Lindstrom) and <strong>The Surf &amp; Sales Podcast</strong> (with Richard Harris)—plus 100 featured guest appearances across the world&apos;s top GTM and leadership shows.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#shows-hosted"
-            className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
           >
             Listen to Shows Scott Hosts
           </a>
           <a
             href="#guest-appearances"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
           >
             Browse 100 Guest Appearances
           </a>
           <a
             href="#sponsor"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] text-xs uppercase tracking-[0.2em] font-medium transition-colors w-full sm:w-auto"
           >
             Sponsor the Show
           </a>
@@ -113,7 +116,7 @@ export default function PodcastPage() {
                   What&apos;s Your Story?
                 </h3>
                 <p className="text-sm text-[#111111]/65 font-light leading-relaxed mb-6">
-                  Real conversations with extraordinary people—from Rich Dad Poor Dad co-author Sharon Lechter and UFC legend Mark Kerr to iHeartMedia’s Johnjay &amp; Rich, Hays Europe CEO Chris Dottie, and Not Impossible Labs founder Mick Ebeling.
+                  Real conversations with extraordinary people—from Rich Dad Poor Dad co-author Sharon Lechter and UFC legend Mark Kerr to iHeartMedia&apos;s Johnjay &amp; Rich, Hays Europe CEO Chris Dottie, and Not Impossible Labs founder Mick Ebeling.
                 </p>
                 <div className="mb-6">
                   <iframe
@@ -222,73 +225,119 @@ export default function PodcastPage() {
       {/* 100 Verbatim Guest Appearances Scraped from scottleeseconsulting.com/podcasts */}
       <section id="guest-appearances" className="py-24 px-6 border-t border-black/10 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
             <div>
               <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/45 font-medium mb-3">
-                Complete Guest Archive ({ALL_APPEARANCES.length} Episodes)
+                Complete Guest Archive ({ALL_APPEARANCES.length} Verbatim Episodes)
               </div>
               <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111]">
-                Featured Guest Appearances
+                Guest Appearances
               </h2>
             </div>
 
-            <div className="w-full md:w-72">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
-                  setVisibleAppearances(18);
+                  setVisibleAppearances(24);
                 }}
-                placeholder="Search 100 episodes..."
-                className="w-full px-4 py-2.5 text-sm bg-white border border-black/15 text-[#111111] placeholder:text-[#111111]/40 focus:outline-none focus:border-[#111111]"
+                placeholder="Search 100 episodes, shows, or co-guests..."
+                className="w-full sm:w-72 px-4 py-2.5 text-sm bg-white border border-black/15 text-[#111111] placeholder:text-[#111111]/40 focus:outline-none focus:border-[#111111]"
               />
+              {visibleAppearances < filteredAppearances.length ? (
+                <button
+                  type="button"
+                  onClick={() => setVisibleAppearances(filteredAppearances.length)}
+                  className="shrink-0 whitespace-nowrap px-4 py-2.5 border border-black/20 hover:border-[#111111] text-[11px] font-mono uppercase tracking-[0.15em] text-[#111111] transition-colors cursor-pointer"
+                >
+                  Show All {filteredAppearances.length} ↓
+                </button>
+              ) : filteredAppearances.length > 24 ? (
+                <button
+                  type="button"
+                  onClick={() => setVisibleAppearances(24)}
+                  className="shrink-0 whitespace-nowrap px-4 py-2.5 border border-black/20 hover:border-[#111111] text-[11px] font-mono uppercase tracking-[0.15em] text-[#111111] transition-colors cursor-pointer"
+                >
+                  Collapse List ↑
+                </button>
+              ) : null}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10 border border-black/10">
-            {filteredAppearances.slice(0, visibleAppearances).map((ep, idx) => (
-              <a
-                key={`${ep.show}-${idx}`}
-                href={ep.audioUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#fcfaf8] p-6 flex items-start gap-4 group hover:bg-[#f5f4ef] transition-colors"
-              >
-                {ep.imageUrl && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={ep.imageUrl}
-                    alt={ep.show}
-                    loading="lazy"
-                    className="w-16 h-16 object-cover border border-black/10 shrink-0 grayscale group-hover:grayscale-0 transition-all"
-                  />
-                )}
-                <div className="flex flex-col justify-between h-full">
-                  <div>
-                    <div className="text-[10px] uppercase tracking-[0.18em] text-[#111111]/50 font-semibold mb-1">
-                      {ep.show}
+            {filteredAppearances.slice(0, visibleAppearances).map((ep, idx) => {
+              const isPlaying = activeEpisode?.audioUrl === ep.audioUrl && activeEpisode?.title === ep.title;
+              return (
+                <div
+                  key={`${ep.show}-${idx}`}
+                  className={`p-6 flex items-start gap-4 group transition-colors ${
+                    isPlaying ? "bg-[#f5f4ef]" : "bg-[#fcfaf8] hover:bg-[#f5f4ef]"
+                  }`}
+                >
+                  {ep.imageUrl && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={ep.imageUrl}
+                      alt={ep.show}
+                      loading="lazy"
+                      className={`w-16 h-16 object-cover border border-black/10 shrink-0 transition-all ${
+                        isPlaying ? "grayscale-0" : "grayscale group-hover:grayscale-0"
+                      }`}
+                    />
+                  )}
+                  <div className="flex flex-col justify-between h-full w-full min-w-0">
+                    <div>
+                      <div className="text-[10px] uppercase tracking-[0.18em] text-[#111111]/50 font-semibold mb-1 truncate">
+                        {ep.show}
+                      </div>
+                      <h3 className="text-base font-serif text-[#111111] leading-snug mb-1.5">
+                        {ep.title}
+                      </h3>
+                      <div className="text-xs text-[#111111]/50 font-light mb-3">
+                        <span className="font-medium text-[#111111]/65">Guests:</span>{" "}
+                        {ep.guests || "Scott Leese"}
+                      </div>
                     </div>
-                    <h3 className="text-base font-serif text-[#111111] leading-snug group-hover:underline underline-offset-4 decoration-black/20 mb-2">
-                      {ep.title}
-                    </h3>
+                    <div className="flex items-center gap-4 pt-2 border-t border-black/5">
+                      <button
+                        type="button"
+                        onClick={() => setActiveEpisode(ep)}
+                        className="shrink-0 whitespace-nowrap text-[10px] uppercase tracking-[0.2em] font-semibold text-[#111111] hover:text-[#111111]/70 transition-colors cursor-pointer"
+                      >
+                        {isPlaying ? "● Playing Below" : "▶ Play Episode"}
+                      </button>
+                      <a
+                        href={ep.audioUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 whitespace-nowrap text-[10px] uppercase tracking-[0.18em] text-[#111111]/45 hover:text-[#111111] transition-colors ml-auto"
+                      >
+                        Direct Audio ↗
+                      </a>
+                    </div>
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-[#111111] group-hover:text-[#d9534f] transition-colors">
-                    Listen Audio &rarr;
-                  </span>
                 </div>
-              </a>
-            ))}
+              );
+            })}
           </div>
 
           {visibleAppearances < filteredAppearances.length && (
-            <div className="mt-12 text-center">
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 type="button"
                 onClick={() => setVisibleAppearances((prev) => prev + 24)}
-                className="px-8 py-4 bg-[#111111] text-white hover:bg-[#333333] text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer"
+                className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] text-white hover:bg-[#333333] text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer"
               >
-                Load More Episodes ({filteredAppearances.length - visibleAppearances} Remaining)
+                Load 24 More ({filteredAppearances.length - visibleAppearances} Remaining)
+              </button>
+              <button
+                type="button"
+                onClick={() => setVisibleAppearances(filteredAppearances.length)}
+                className="shrink-0 whitespace-nowrap px-8 py-4 border border-black/20 hover:border-[#111111] text-[#111111] text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer"
+              >
+                View All {filteredAppearances.length} Episodes
               </button>
             </div>
           )}
@@ -417,6 +466,58 @@ export default function PodcastPage() {
           )}
         </div>
       </section>
+
+      {/* Sticky Bottom In-Page Audio Player */}
+      {activeEpisode && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#111111] text-white border-t border-white/15 shadow-2xl px-4 md:px-8 py-3.5">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex items-center gap-3.5 min-w-0">
+              {activeEpisode.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={activeEpisode.imageUrl}
+                  alt={activeEpisode.show}
+                  className="w-12 h-12 object-cover border border-white/15 shrink-0"
+                />
+              )}
+              <div className="min-w-0">
+                <div className="text-[10px] font-mono uppercase tracking-[0.18em] text-white/55 truncate">
+                  {activeEpisode.show} • Guests: {activeEpisode.guests || "Scott Leese"}
+                </div>
+                <div className="text-sm font-serif text-white truncate">
+                  {activeEpisode.title}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 w-full md:w-auto">
+              <audio
+                key={activeEpisode.audioUrl}
+                src={activeEpisode.audioUrl}
+                controls
+                autoPlay
+                className="h-9 w-full md:w-80"
+              />
+              <a
+                href={activeEpisode.audioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 whitespace-nowrap text-[10px] font-mono uppercase tracking-[0.16em] text-white/65 hover:text-white border border-white/20 px-2.5 py-1.5"
+              >
+                Open ↗
+              </a>
+              <button
+                type="button"
+                onClick={() => setActiveEpisode(null)}
+                className="shrink-0 text-xs font-mono uppercase tracking-[0.15em] text-white/60 hover:text-white px-2 py-1 cursor-pointer"
+                title="Close Player"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
