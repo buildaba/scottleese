@@ -1,41 +1,28 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
+import { readStore, writeStore, generateId } from '@/lib/store';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, company, budget, message } = body;
+    const store = readStore();
 
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
+    const entry = {
+      id: generateId('med'),
+      name: String(body.name || '').trim(),
+      email: String(body.email || '').trim(),
+      company: String(body.company || '').trim(),
+      packageInterest: String(body.packageInterest || '').trim(),
+      budgetRange: String(body.budgetRange || body.budget || '').trim(),
+      message: String(body.message || '').trim(),
+      status: 'new' as const,
+      createdAt: new Date().toISOString(),
+    };
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      );
-    }
+    store.mediaLeads.unshift(entry);
+    writeStore(store);
 
-    console.log("=== NEW MEDIA/PARTNERSHIP INQUIRY ===");
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Company: ${company || "N/A"}`);
-    console.log(`Budget: ${budget || "N/A"}`);
-    console.log(`Message: ${message}`);
-    console.log("=====================================");
-
-    return NextResponse.json(
-      { success: true, message: "Partnership inquiry received" },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true, id: entry.id });
   } catch {
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

@@ -55,6 +55,12 @@ export default function Footer() {
           <p className="text-[#111111]/40 text-xs">
             &copy; {new Date().getFullYear()} Scott Leese Consulting. All rights reserved.
           </p>
+          <Link
+            href="/admin"
+            className="text-[#111111]/35 hover:text-[#111111] text-[11px] uppercase tracking-[0.18em] transition-colors"
+          >
+            Executive Admin &rarr;
+          </Link>
         </div>
       </div>
     </footer>

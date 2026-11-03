@@ -1,56 +1,85 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
+import { readStore, writeStore, generateId } from '@/lib/store';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    const store = readStore();
+    const now = new Date().toISOString();
 
-    const { name, email, company, website, plan, message } = body;
-
-    // Validate required fields
-    if (!name || !email || !company || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
+    // 1. SLC Talent Bench — Employer Hiring Request
+    if (body.type === 'slc_talent_bench_employer') {
+      const entry = {
+        id: generateId('emp'),
+        company: String(body.company || '').trim(),
+        website: String(body.website || '').trim(),
+        name: String(body.name || '').trim(),
+        email: String(body.email || '').trim(),
+        linkedin: String(body.linkedin || '').trim(),
+        arrStage: String(body.arrStage || '').trim(),
+        rolesNeeded: Array.isArray(body.rolesNeeded) ? body.rolesNeeded : [],
+        notes: String(body.notes || '').trim(),
+        status: 'new' as const,
+        createdAt: now,
+      };
+      store.talentEmployers.unshift(entry);
+      writeStore(store);
+      return NextResponse.json({ success: true, id: entry.id });
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      );
+    // 2. SLC Talent Bench — Candidate Application
+    if (body.type === 'slc_talent_bench_candidate') {
+      const entry = {
+        id: generateId('cand'),
+        name: String(body.name || '').trim(),
+        email: String(body.email || '').trim(),
+        linkedin: String(body.linkedin || '').trim(),
+        roleTrack: String(body.roleTrack || '').trim(),
+        acvRange: String(body.acvRange || '').trim(),
+        quotaRecord: String(body.quotaRecord || '').trim(),
+        compExpectation: String(body.compExpectation || '').trim(),
+        status: 'new' as const,
+        createdAt: now,
+      };
+      store.talentCandidates.unshift(entry);
+      writeStore(store);
+      return NextResponse.json({ success: true, id: entry.id });
     }
 
-    // In production, this would send an email via Resend, SendGrid, etc.
-    // For now, log and return success
-    console.log("=== NEW ADVISORY INQUIRY ===");
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Company: ${company}`);
-    console.log(`Website: ${website || "N/A"}`);
-    console.log(`Plan: ${plan || "Not specified"}`);
-    console.log(`Message: ${message}`);
-    console.log("============================");
+    // 3. Podcast Guest / Story Pitch
+    if (body.type === 'podcast_pitch') {
+      const entry = {
+        id: generateId('pod'),
+        name: String(body.name || '').trim(),
+        email: String(body.email || '').trim(),
+        story: String(body.story || '').trim(),
+        status: 'new' as const,
+        createdAt: now,
+      };
+      store.podcastLeads.unshift(entry);
+      writeStore(store);
+      return NextResponse.json({ success: true, id: entry.id });
+    }
 
-    // TODO: Integrate with email service
-    // Example with Resend:
-    // await resend.emails.send({
-    //   from: 'noreply@thescottleese.com',
-    //   to: 'scott@scottleeseconsulting.com',
-    //   subject: `New Advisory Inquiry from ${name} at ${company}`,
-    //   html: `<p><strong>Name:</strong> ${name}</p>...`
-    // });
+    // 4. Default: Advisory / Consulting / Retainer Inquiry
+    const entry = {
+      id: generateId('adv'),
+      name: String(body.name || '').trim(),
+      email: String(body.email || '').trim(),
+      company: String(body.company || '').trim(),
+      role: String(body.linkedin || body.role || '').trim(),
+      arr: String(body.website || body.phone || body.arr || '').trim(),
+      interests: Array.isArray(body.interests) ? body.interests : [],
+      message: String(body.message || '').trim(),
+      status: 'new' as const,
+      createdAt: now,
+    };
 
-    return NextResponse.json(
-      { success: true, message: "Inquiry received successfully" },
-      { status: 200 }
-    );
+    store.advisoryLeads.unshift(entry);
+    writeStore(store);
+
+    return NextResponse.json({ success: true, id: entry.id });
   } catch {
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

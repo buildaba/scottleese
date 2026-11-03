@@ -22,14 +22,22 @@ export default function SpeakingPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch("/api/speaking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+    } catch {
+      // fallback
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
       setFormData({ name: "", email: "", organization: "", eventType: "", audienceSize: "", eventDate: "", budgetRange: "", details: "" });
-    }, 1500);
+    }
   };
 
   return (

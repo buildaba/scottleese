@@ -8,6 +8,9 @@ import {
   getRelatedArticles,
   getArticleFunnelRecommendation,
 } from '@/data/articles';
+import { readStore } from '@/lib/store';
+
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return ALL_ARTICLES.map((article) => ({
@@ -21,7 +24,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const store = readStore();
+  const article =
+    store.customArticles.find((a) => a.slug === slug) || getArticleBySlug(slug);
   if (!article) {
     return {
       title: 'Article Not Found | Scott Leese',
@@ -44,16 +49,19 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const store = readStore();
+  const combinedArticles = [...store.customArticles, ...ALL_ARTICLES];
+  const article = combinedArticles.find((a) => a.slug === slug);
 
   if (!article) {
     notFound();
   }
 
-  const articleIndex = ALL_ARTICLES.findIndex((a) => a.slug === article.slug);
-  const issueNumber = ALL_ARTICLES.length - articleIndex;
-  const prevArticle = articleIndex < ALL_ARTICLES.length - 1 ? ALL_ARTICLES[articleIndex + 1] : null;
-  const nextArticle = articleIndex > 0 ? ALL_ARTICLES[articleIndex - 1] : null;
+  const articleIndex = combinedArticles.findIndex((a) => a.slug === article.slug);
+  const issueNumber = combinedArticles.length - articleIndex;
+  const prevArticle =
+    articleIndex < combinedArticles.length - 1 ? combinedArticles[articleIndex + 1] : null;
+  const nextArticle = articleIndex > 0 ? combinedArticles[articleIndex - 1] : null;
   const relatedArticles = getRelatedArticles(article.slug, article.category, 3);
   const funnel = getArticleFunnelRecommendation(article);
 

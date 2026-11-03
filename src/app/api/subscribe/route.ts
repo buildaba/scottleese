@@ -1,45 +1,31 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
+import { readStore, writeStore, generateId } from '@/lib/store';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email } = body;
+    const email = String(body.email || '').trim().toLowerCase();
+    const source = String(body.source || 'newsletter').trim();
 
-    if (!email) {
-      return NextResponse.json(
-        { error: "Email is required" },
-        { status: 400 }
-      );
+    if (!email || !email.includes('@')) {
+      return NextResponse.json({ error: 'Valid email is required' }, { status: 400 });
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      );
+    const store = readStore();
+    const exists = store.subscribers.some((s) => s.email.toLowerCase() === email);
+
+    if (!exists) {
+      store.subscribers.unshift({
+        id: generateId('sub'),
+        email,
+        source,
+        createdAt: new Date().toISOString(),
+      });
+      writeStore(store);
     }
 
-    console.log("=== NEW NEWSLETTER SUBSCRIBER ===");
-    console.log(`Email: ${email}`);
-    console.log("=================================");
-
-    // TODO: Integrate with ConvertKit/Beehiiv
-    // Example with ConvertKit:
-    // await fetch(`https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ api_key: CONVERTKIT_API_KEY, email })
-    // });
-
-    return NextResponse.json(
-      { success: true, message: "Subscribed successfully" },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch {
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

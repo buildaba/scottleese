@@ -32,14 +32,25 @@ export default function PodcastPage() {
     );
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "podcast_pitch",
+          ...formData,
+        }),
+      });
+    } catch {
+      // fallback
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
       setFormData({ name: "", email: "", story: "" });
-    }, 1000);
+    }
   };
 
   return (

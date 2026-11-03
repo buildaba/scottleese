@@ -1,21 +1,27 @@
 import Link from 'next/link';
 import NewsletterForm from '@/components/NewsletterForm';
 import { ALL_ARTICLES } from '@/data/articles';
+import { readStore } from '@/lib/store';
 import BlogArchiveClient from './BlogArchiveClient';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
-  title: 'Field Notes & Newsletter Archive (153 Dispatches) | Scott Leese',
+  title: 'Field Notes & Newsletter Archive | Scott Leese',
   description:
-    'Read all 153 verbatim editions of The Leese Effect by Scott Leese: tactical sales playbooks, GTM strategy, hiring VPs of Sales, and scaling from $0 to $25M.',
+    'Read all verbatim editions of The Leese Effect by Scott Leese: tactical sales playbooks, GTM strategy, hiring VPs of Sales, and scaling from $0 to $25M.',
 };
 
 export default function BlogPage() {
+  const store = readStore();
+  const combinedArticles = [...store.customArticles, ...ALL_ARTICLES];
+
   return (
     <div className="min-h-screen bg-[#fcfaf8] text-[#111111]">
       {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 md:px-12 max-w-4xl mx-auto text-center">
         <div className="inline-block mb-8 px-4 py-1.5 rounded-full border border-black/10 text-[#111111]/70 text-sm font-medium tracking-wide">
-          The Complete Leese Effect Archive &bull; {ALL_ARTICLES.length} Published Dispatches
+          The Complete Leese Effect Archive &bull; {combinedArticles.length} Published Dispatches
         </div>
         <h1 className="text-5xl md:text-7xl font-serif tracking-tight mb-8 leading-[1.1]">
           Field Notes
@@ -40,8 +46,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Interactive Searchable & Filterable Archive of All 153 Real Articles */}
-      <BlogArchiveClient articles={ALL_ARTICLES} />
+      {/* Interactive Searchable & Filterable Archive of All Real Articles */}
+      <BlogArchiveClient articles={combinedArticles} />
 
       {/* Newsletter Bottom CTA */}
       <section className="py-32 px-6 border-t border-black/10">

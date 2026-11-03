@@ -1,45 +1,30 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from 'next/server';
+import { readStore, writeStore, generateId } from '@/lib/store';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    const store = readStore();
 
-    const { name, email, organization, eventType, audienceSize, eventDate, budget, details } = body;
+    const entry = {
+      id: generateId('spk'),
+      name: String(body.name || '').trim(),
+      email: String(body.email || '').trim(),
+      organization: String(body.organization || '').trim(),
+      eventType: String(body.eventType || '').trim(),
+      audienceSize: String(body.audienceSize || '').trim(),
+      eventDate: String(body.eventDate || '').trim(),
+      budgetRange: String(body.budgetRange || body.budget || '').trim(),
+      details: String(body.details || '').trim(),
+      status: 'new' as const,
+      createdAt: new Date().toISOString(),
+    };
 
-    if (!name || !email || !organization) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
+    store.speakingLeads.unshift(entry);
+    writeStore(store);
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email format" },
-        { status: 400 }
-      );
-    }
-
-    console.log("=== NEW SPEAKING INQUIRY ===");
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Organization: ${organization}`);
-    console.log(`Event Type: ${eventType || "N/A"}`);
-    console.log(`Audience Size: ${audienceSize || "N/A"}`);
-    console.log(`Event Date: ${eventDate || "N/A"}`);
-    console.log(`Budget: ${budget || "N/A"}`);
-    console.log(`Details: ${details || "N/A"}`);
-    console.log("============================");
-
-    return NextResponse.json(
-      { success: true, message: "Speaking inquiry received" },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true, id: entry.id });
   } catch {
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

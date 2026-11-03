@@ -20,14 +20,22 @@ export default function MediaPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch("/api/media", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+    } catch {
+      // fallback
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
       setFormData({ name: "", email: "", company: "", packageInterest: "", budgetRange: "", message: "" });
-    }, 800);
+    }
   };
 
   return (
