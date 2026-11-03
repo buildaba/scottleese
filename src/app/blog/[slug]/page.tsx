@@ -121,16 +121,16 @@ export default async function BlogPostPage({
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
               <Link
                 href="/newsletter"
-                className="px-4 py-2 text-xs uppercase tracking-[0.15em] font-medium border border-black/15 hover:border-[#111111] text-[#111111] transition-colors"
+                className="shrink-0 whitespace-nowrap px-4 py-2 text-xs uppercase tracking-[0.15em] font-medium border border-black/15 hover:border-[#111111] text-[#111111] transition-colors"
               >
                 Subscribe Weekly
               </Link>
               <Link
                 href={funnel.primaryCta.href}
-                className="px-4 py-2 text-xs uppercase tracking-[0.15em] font-medium bg-[#111111] text-white hover:bg-[#333333] transition-colors"
+                className="shrink-0 whitespace-nowrap px-4 py-2 text-xs uppercase tracking-[0.15em] font-medium bg-[#111111] text-white hover:bg-[#333333] transition-colors"
               >
                 Work With Scott &rarr;
               </Link>

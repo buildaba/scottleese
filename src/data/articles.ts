@@ -58,22 +58,22 @@ export function getArticleFunnelRecommendation(article: Article): FunnelRecommen
     text.includes('team')
   ) {
     return {
-      badge: 'The SLC Talent Bench • Executive Search & GTM Recruiting',
+      badge: 'The SLC Talent Bench • Curated GTM Talent Network & Search',
       headline: 'Need to hire elite AEs, SDRs, or a VP of Sales without a $200K misfire?',
       description:
-        'Don’t hire a resume—hire from our bench. Every Founding AE, RevOps leader, and VP of Sales on The SLC Talent Bench is sourced and screened by our dedicated GTM recruiting division and final-round calibrated by Scott Leese.',
+        'Don’t hire a resume—hire from the network. Connect directly with stage-matched Founding AEs, RevOps leaders, and VPs of Sales across Scott Leese’s 392.5K+ operator ecosystem.',
       primaryCta: {
         label: 'Hire From The SLC Talent Bench →',
         href: '/talent',
       },
       secondaryCta: {
-        label: 'Apply to Join the Talent Bench',
+        label: 'Join the Talent Bench',
         href: '/talent#apply-bench',
       },
       metrics: [
-        { label: 'Startups Scaled', value: '200+' },
-        { label: 'Final-Round Vetting', value: 'By Scott Leese' },
-        { label: 'Time to Shortlist', value: '14 Days' },
+        { label: 'B2B Ecosystem', value: '392.5K+' },
+        { label: 'LinkedIn Reach', value: '134K+' },
+        { label: 'Startups Served', value: '200+' },
       ],
     };
   }

@@ -32,18 +32,18 @@ export default function InvestPage() {
           Backing exceptional founders building the future of <strong>AI, robotics, defense, energy, and cleantech</strong>—combining deep technical diligence with battle-tested $0→$25M GTM distribution.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 mb-20">
           <a
             href="https://venture.angellist.com/v/milosventures/syndicate"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
             Back Our Syndicate on AngelList →
           </a>
           <Link
             href="/advisory#contact"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
             Inquire as an Accredited LP
           </Link>
@@ -51,7 +51,7 @@ export default function InvestPage() {
             href="https://www.linkedin.com/company/milosventures/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
             LinkedIn (SF &amp; Austin) ↗
           </a>

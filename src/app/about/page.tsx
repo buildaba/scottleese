@@ -200,7 +200,7 @@ export default function AboutPage() {
             <div className="md:col-span-4 flex md:justify-end">
               <a
                 href="mailto:scott@scottleeseconsulting.com?subject=HTU%20Soccer%20Sponsorship%20%26%20Fundraising"
-                className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium text-sm transition-colors text-center w-full md:w-auto"
+                className="shrink-0 whitespace-nowrap px-7 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium text-xs uppercase tracking-[0.18em] transition-colors text-center w-full md:w-auto"
               >
                 Partner on HTU Soccer →
               </a>

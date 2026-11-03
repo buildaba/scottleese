@@ -17,13 +17,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 mb-16 md:mb-24 w-full sm:w-auto items-start">
             <Link 
               href="/advisory" 
-              className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium rounded-md text-lg transition-colors w-full sm:w-auto text-center"
+              className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium text-xs uppercase tracking-[0.2em] transition-colors w-full sm:w-auto text-center"
             >
-              Work With Me
+              Work With Me &rarr;
             </Link>
             <Link 
               href="/media" 
-              className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium rounded-md text-lg transition-colors w-full sm:w-auto text-center"
+              className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium text-xs uppercase tracking-[0.2em] transition-colors w-full sm:w-auto text-center"
             >
               View Media Kit
             </Link>
@@ -139,18 +139,18 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link 
-              href="/advisory" 
-              className="px-10 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium rounded-md text-lg transition-colors w-full sm:w-auto"
+              href="/advisory#contact" 
+              className="shrink-0 whitespace-nowrap px-10 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium text-xs uppercase tracking-[0.2em] transition-colors w-full sm:w-auto"
             >
-              Book a discovery call
+              Book a Discovery Call &rarr;
             </Link>
             <a 
-              href="https://instagram.com/thescottleese" 
+              href="https://www.instagram.com/thescottleese" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-[#111111]/60 hover:text-[#111111] font-medium transition-colors flex items-center gap-2 text-lg"
+              className="shrink-0 whitespace-nowrap text-[#111111]/70 hover:text-[#111111] font-medium transition-colors flex items-center gap-2 text-xs uppercase tracking-[0.2em]"
             >
-              DM me on Instagram
+              DM Me on Instagram
               <span className="text-[#d9534f]">→</span>
             </a>
           </div>

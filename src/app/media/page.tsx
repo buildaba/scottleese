@@ -49,16 +49,16 @@ export default function MediaPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => document.getElementById("packages")?.scrollIntoView({ behavior: "smooth" })}
-            className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto cursor-pointer"
           >
-            View 2026 Sponsorship Packages
+            View Sponsorship Packages &rarr;
           </button>
           <a
             href="/Scott_Leese_Media_Kit_2026.pdf"
             download="Scott_Leese_Media_Kit_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium text-lg transition-colors w-full sm:w-auto text-center"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium text-xs uppercase tracking-[0.2em] transition-colors w-full sm:w-auto text-center"
           >
             Download 2026 Media Kit (PDF) ↓
           </a>
@@ -378,9 +378,9 @@ export default function MediaPage() {
               </div>
               <a
                 href="#contact"
-                className="px-6 py-3.5 bg-[#111111] text-white hover:bg-[#333333] font-medium text-sm transition-colors text-center"
+                className="shrink-0 whitespace-nowrap px-6 py-3.5 bg-[#111111] text-white hover:bg-[#333333] font-medium text-xs uppercase tracking-[0.18em] transition-colors text-center"
               >
-                Become a 2026 Brand Partner →
+                Become a Brand Partner →
               </a>
             </div>
           </div>

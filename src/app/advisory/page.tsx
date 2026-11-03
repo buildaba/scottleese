@@ -156,7 +156,7 @@ const COMPARISON_SECTIONS = [
       },
       {
         title: "Get It Done (The SLC Talent Bench)",
-        desc: "Full-cycle headhunting via the SLC Talent Bench: outbound candidate sourcing, screening, Scott Leese final-round vetting, and placement guarantee.",
+        desc: "Curated GTM matchmaking and targeted search across Scott's 392.5K+ operator network for Founding AEs, RevOps, and VPs of Sales.",
         starter: "Add-on",
         revops: "Add-on",
         complete: true,
@@ -224,13 +224,13 @@ export default function AdvisoryPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="#pricing"
-              className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-lg w-full sm:w-auto"
+              className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
             >
-              View Plans &amp; Pricing
+              View Plans &amp; Pricing &rarr;
             </Link>
             <Link
               href="#contact"
-              className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium transition-colors text-lg w-full sm:w-auto"
+              className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
             >
               Get Started Today
             </Link>
@@ -387,9 +387,9 @@ export default function AdvisoryPage() {
               </p>
               <ul className="space-y-2 text-sm text-[#111111]/75 font-light">
                 <li>• Ideal Candidate Profiles &amp; scorecards</li>
-                <li>• Outbound sourcing &amp; candidate screening</li>
-                <li>• Final-round candidate vetting with Scott</li>
-                <li>• Onboarding &amp; 90-day ramp playbooks</li>
+                <li>• Curated bench matching &amp; targeted search</li>
+                <li>• Warm introductions to stage-matched operators</li>
+                <li>• Advisory calibration with Scott</li>
               </ul>
             </div>
           </div>
@@ -619,7 +619,7 @@ export default function AdvisoryPage() {
                   </th>
                   <th className="p-6 text-center w-[15%] border-l border-black/10 bg-[#f5f4ef]">
                     <div className="font-serif text-base text-[#111111]">SLC Talent Bench</div>
-                    <div className="text-[11px] text-[#111111]/60 font-light">Hiring Sprint</div>
+                    <div className="text-[11px] text-[#111111]/60 font-light">Network &amp; Search</div>
                   </th>
                 </tr>
               </thead>
@@ -781,7 +781,7 @@ export default function AdvisoryPage() {
 
       {/* Contact Section */}
       <section id="contact" className="py-24 border-t border-black/10 px-6 scroll-mt-20">
-        <div className="max-w-3xl mx-auto">
+        <div id="get-started" className="max-w-3xl mx-auto scroll-mt-24">
           <div className="mb-12">
             <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/40 font-medium mb-3">Get Started</div>
             <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-4 text-[#111111]">

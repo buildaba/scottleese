@@ -23,13 +23,13 @@ export default function EventsPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#b2b-buyouts"
-            className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
-            Explore B2B Full-Cohort Buyouts
+            Explore B2B Full-Cohort Buyouts &rarr;
           </a>
           <a
             href="#individual"
-            className="px-8 py-4 bg-transparent border border-black/20 hover:border-black/50 text-[#111111] font-medium transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-transparent border border-black/20 hover:border-[#111111] text-[#111111] font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
             Reserve Individual Seat
           </a>

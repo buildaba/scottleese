@@ -123,7 +123,7 @@ export default function Navigation() {
 
           <Link
             href="/advisory#contact"
-            className="bg-[#111111] hover:bg-[#333333] text-white px-5 py-2.5 rounded-md font-medium text-sm transition-colors shrink-0"
+            className="bg-[#111111] hover:bg-[#333333] text-white px-5 py-2.5 text-xs uppercase tracking-[0.18em] font-medium transition-colors shrink-0 whitespace-nowrap"
           >
             Work With Me
           </Link>

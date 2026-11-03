@@ -48,17 +48,17 @@ export default function SpeakingPage() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button 
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium rounded-md transition-colors text-lg w-full sm:w-auto cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto cursor-pointer"
           >
-            Request Booking
+            Request Booking →
           </button>
           <a
             href="https://www.canva.com/design/DAGqnG0SYdE/cizSvUCNXW-BMAc5EF1RzA/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 border border-black/20 hover:border-[#111111] text-[#111111] font-medium rounded-md transition-colors text-lg w-full sm:w-auto"
+            className="shrink-0 whitespace-nowrap px-8 py-4 border border-black/20 hover:border-[#111111] text-[#111111] font-medium transition-colors text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
           >
-            View Official Speaker Portfolio ↗
+            View Speaker Portfolio ↗
           </a>
         </div>
       </section>
