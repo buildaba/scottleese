@@ -32,7 +32,7 @@ export default function Home() {
           {/* Minimalist Stats Bar */}
           <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-6 py-8 md:py-10 border-y border-black/10">
             {[
-              { val: "392.5K", label: "Followers" },
+              { val: "406.5K+", label: "Followers" },
               { val: "200+", label: "Companies" },
               { val: "12", label: "Unicorns" },
               { val: "15", label: "Exits" },
@@ -59,7 +59,7 @@ export default function Home() {
               { href: "/speaking", title: "Speaking", desc: "Keynotes on sales, resilience, and modern GTM." },
               { href: "/events", title: "Events", desc: "Surf & Sales — executive retreats & corporate cohort buyouts." },
               { href: "/invest", title: "Investing", desc: "Milos Ventures — backing AI, robotics, defense & energy." },
-              { href: "/media", title: "Creator & Podcast", desc: "392.5K followers + What's Your Story. B2B brand partnerships." }
+              { href: "/media", title: "Creator & Podcast", desc: "406.5K+ followers + What's Your Story. B2B brand partnerships." }
             ].map((card, i) => (
               <Link key={i} href={card.href} className="group bg-[#fcfaf8] p-7 sm:p-10 md:p-12 hover:bg-[#f5f4ef] transition-colors flex flex-col h-full">
                 <h3 className="text-2xl sm:text-3xl font-serif mb-3 md:mb-4 flex items-center justify-between text-[#111111]">

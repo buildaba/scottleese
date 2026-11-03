@@ -156,7 +156,7 @@ const COMPARISON_SECTIONS = [
       },
       {
         title: "Get It Done (The SLC Talent Bench)",
-        desc: "Curated GTM matchmaking and targeted search across Scott's 392.5K+ operator network for Founding AEs, RevOps, and VPs of Sales.",
+        desc: "Curated GTM matchmaking and targeted search across Scott's 406.5K+ operator network for Founding AEs, RevOps, and VPs of Sales.",
         starter: "Add-on",
         revops: "Add-on",
         complete: true,
@@ -534,7 +534,7 @@ export default function AdvisoryPage() {
                   Don&apos;t Hire a Resume. Hire From The SLC Talent Bench.
                 </h3>
                 <p className="text-[#111111]/70 font-light leading-relaxed mb-6 text-lg">
-                  Every week, top-performing Founding AEs, RevOps architects, and VPs of Sales across Scott&apos;s 392.5K+ B2B ecosystem reach out looking for their next startup. Through <strong>The SLC Talent Bench</strong>, we connect founders directly with stage-matched operators from our private talent pool and targeted GTM search.
+                  Every week, top-performing Founding AEs, RevOps architects, and VPs of Sales across Scott&apos;s 406.5K+ ecosystem (227K on Instagram &amp; 134K on LinkedIn) reach out looking for their next startup. Through <strong>The SLC Talent Bench</strong>, we connect founders directly with stage-matched operators from our private talent pool and targeted GTM search.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-black/10 text-sm">
                   <div>

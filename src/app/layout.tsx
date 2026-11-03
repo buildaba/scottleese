@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Scott Leese",
   },
   description:
-    "Strategic GTM + RevOps Advisor. 392.5K followers. 200+ companies. 12 unicorns. 15 exits. 3x bestselling author. Scale better from $0 to $25M.",
+    "Strategic GTM + RevOps Advisor. 406.5K+ followers. 200+ companies. 12 unicorns. 15 exits. 3x bestselling author. Scale better from $0 to $25M.",
   metadataBase: new URL("https://scottleese.com"),
   openGraph: {
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Scott Leese",
     title: "Scott Leese — Sales Leader, Advisor, Creator",
     description:
-      "Strategic GTM + RevOps Advisor to 200+ companies, including 12 unicorns and 15 exits. 392.5K followers. 3x bestselling author.",
+      "Strategic GTM + RevOps Advisor to 200+ companies, including 12 unicorns and 15 exits. 406.5K+ followers. 3x bestselling author.",
   },
   twitter: {
     card: "summary_large_image",

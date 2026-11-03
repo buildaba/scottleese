@@ -9,7 +9,7 @@ const INTEREST_OPTIONS = [
   { id: "recruiting", label: "The SLC Talent Bench (GTM Recruiting)", sub: "Curated Network Matchmaking • Founding AEs, RevOps & VPs" },
   { id: "surf-b2b", label: "Surf & Sales B2B Retreat Buyout", sub: "Full Cohort or Team Seats" },
   { id: "training", label: "SKO / Keynote / Sales Training", sub: "Live or Virtual Event" },
-  { id: "podcast-media", label: "Creator / Podcast Sponsorship", sub: "392.5K Audience Reach" },
+  { id: "podcast-media", label: "Creator / Podcast Sponsorship", sub: "406.5K+ Audience Reach" },
 ];
 
 export default function ContactForm() {

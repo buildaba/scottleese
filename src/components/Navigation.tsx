@@ -29,7 +29,7 @@ export default function Navigation() {
     { name: 'The Leese Effect', href: '/newsletter', sub: 'Weekly Thursday newsletter (4.5K+)' },
     { name: 'Podcasts', href: '/podcast', sub: "What's Your Story? & 100+ guest eps" },
     { name: 'Books', href: '/books', sub: '3x Amazon bestselling playbooks' },
-    { name: 'Media & Sponsorships', href: '/media', sub: '392.5K B2B creator partnerships' },
+    { name: 'Media & Sponsorships', href: '/media', sub: '406.5K+ B2B creator partnerships' },
   ];
 
   return (

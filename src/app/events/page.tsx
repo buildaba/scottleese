@@ -108,7 +108,7 @@ export default function EventsPage() {
                 <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/50 mb-2">$15K – $45K • B2B Vendors</div>
                 <h3 className="text-3xl font-serif text-[#111111] mb-4">Category-Exclusive Sponsor</h3>
                 <p className="text-[#111111]/65 font-light text-sm leading-relaxed mb-8">
-                  Put your B2B SaaS brand in the ocean for 5 days with 20 decision-makers (CROs, VPs of Sales, Founders)—combined with Scott&apos;s 392.5K social reach.
+                  Put your B2B SaaS brand in the ocean for 5 days with 20 decision-makers (CROs, VPs of Sales, Founders)—combined with Scott&apos;s 406.5K+ social reach.
                 </p>
                 <ul className="space-y-3 text-sm text-[#111111]/80 font-light mb-10">
                   <li>✓ Big Wave Legend ($45K) / Pipeline Charger ($30K) / Local Shredder ($15K)</li>

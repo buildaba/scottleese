@@ -311,7 +311,7 @@ export default async function BlogPostPage({
                   href="/media"
                   className="text-xs uppercase tracking-[0.15em] font-medium text-[#111111] hover:text-[#d9534f] transition-colors"
                 >
-                  &rarr; Sponsor 392.5K B2B Reach
+                  &rarr; Sponsor 406.5K+ B2B Reach
                 </Link>
               </div>
             </div>

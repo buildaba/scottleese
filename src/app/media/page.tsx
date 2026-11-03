@@ -49,7 +49,7 @@ export default function MediaPage() {
           Let&apos;s Build Something Your Buyers Actually Watch.
         </h1>
         <p className="text-xl md:text-2xl text-[#111111]/65 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-          392.5K followers and subscribers across six channels. 8.7M views on a single Instagram Reel. Direct reach into founders, CEOs, CROs, VPs of Sales, and the VCs who back them.
+          406.5K+ followers and subscribers across six channels—including 227K on Instagram and 134K on LinkedIn. 8.7M views on a single Instagram Reel. Direct reach into founders, CEOs, CROs, VPs of Sales, and the VCs who back them.
         </p>
         <p className="text-sm uppercase tracking-[0.18em] text-[#111111]/50 mb-12">
           6x Sales Leader • 5x Founder • 3x Bestselling Author • 50+ Advisor Equity Positions • Executive Venture Partner at TipTop VC
@@ -78,7 +78,7 @@ export default function MediaPage() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <div className="text-xs uppercase tracking-[0.2em] text-[#111111]/40 font-medium mb-3">Audience Breakdown</div>
-            <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111]">392.5K Total Reach</h2>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111]">406.5K+ Total Reach</h2>
           </div>
           <p className="text-lg text-[#111111]/60 font-light">
             Founders, CEOs, CROs, VPs of Sales, and the VCs who back them.
@@ -101,7 +101,7 @@ export default function MediaPage() {
               <div className="text-lg font-medium text-[#111111] mb-10">@thescottleese</div>
             </div>
             <div>
-              <div className="text-5xl md:text-6xl font-serif tracking-tight text-[#111111] mb-2">213K</div>
+              <div className="text-5xl md:text-6xl font-serif tracking-tight text-[#111111] mb-2">227K</div>
               <div className="text-[#111111]/50 font-light">Followers</div>
             </div>
           </a>

@@ -88,7 +88,7 @@ export default function SpeakingPage() {
               <span className="text-[0.7rem] uppercase tracking-[0.15em] text-[#111111]/50 font-medium">Bestselling Books</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111] mb-2">392K+</span>
+              <span className="text-4xl md:text-5xl font-serif tracking-tight text-[#111111] mb-2">406K+</span>
               <span className="text-[0.7rem] uppercase tracking-[0.15em] text-[#111111]/50 font-medium">Social Following</span>
             </div>
           </div>

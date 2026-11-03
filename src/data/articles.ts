@@ -61,7 +61,7 @@ export function getArticleFunnelRecommendation(article: Article): FunnelRecommen
       badge: 'The SLC Talent Bench • Curated GTM Talent Network & Search',
       headline: 'Need to hire elite AEs, SDRs, or a VP of Sales without a $200K misfire?',
       description:
-        'Don’t hire a resume—hire from the network. Connect directly with stage-matched Founding AEs, RevOps leaders, and VPs of Sales across Scott Leese’s 392.5K+ operator ecosystem.',
+        'Don’t hire a resume—hire from the network. Connect directly with stage-matched Founding AEs, RevOps leaders, and VPs of Sales across Scott Leese’s 406.5K+ operator ecosystem.',
       primaryCta: {
         label: 'Hire From The SLC Talent Bench →',
         href: '/talent',
@@ -71,7 +71,7 @@ export function getArticleFunnelRecommendation(article: Article): FunnelRecommen
         href: '/talent#apply-bench',
       },
       metrics: [
-        { label: 'B2B Ecosystem', value: '392.5K+' },
+        { label: 'B2B Ecosystem', value: '406.5K+' },
         { label: 'LinkedIn Reach', value: '134K+' },
         { label: 'Startups Served', value: '200+' },
       ],

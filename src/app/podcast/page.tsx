@@ -315,7 +315,7 @@ export default function PodcastPage() {
               {[
                 "Host-read pre-roll and mid-roll integrations per episode",
                 "Logo placement and backlinks on podcast & main hubs",
-                "Short-form video clips distributed across 392.5K combined social followers",
+                "Short-form video clips distributed across 406.5K+ combined social followers",
                 "Executive guest interview or live roundtable opportunity",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-4 text-[#111111]/80 font-light text-lg">

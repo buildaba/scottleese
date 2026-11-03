@@ -10,7 +10,7 @@ export default function Footer() {
               Scott Leese
             </Link>
             <p className="text-[#111111]/60 text-sm mb-6 max-w-xs font-light leading-relaxed">
-              Strategic GTM + RevOps Advisor. 392.5K followers. 200+ companies. 12 unicorns. 15 exits.
+              Strategic GTM + RevOps Advisor. 406.5K+ followers. 200+ companies. 12 unicorns. 15 exits.
             </p>
             <a href="mailto:scott@scottleeseconsulting.com" className="text-[#111111] hover:text-[#d9534f] text-sm font-medium transition-colors">
               scott@scottleeseconsulting.com

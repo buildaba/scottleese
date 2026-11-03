@@ -333,7 +333,7 @@ export default function AdminDashboardPage() {
                       SLC Talent Bench Matchmaking
                     </div>
                     <p className="text-xs text-[#111111]/60 font-light mb-3">
-                      Match founders hiring AEs/VPs with operators applying from Scott&apos;s 392.5K+ network.
+                      Match founders hiring AEs/VPs with operators applying from Scott&apos;s 406.5K+ network.
                     </p>
                     <button
                       type="button"

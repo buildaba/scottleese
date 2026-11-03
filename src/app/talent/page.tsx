@@ -6,7 +6,7 @@ import TalentPortalForms from './TalentPortalForms';
 export const metadata: Metadata = {
   title: 'The SLC Talent Bench | Curated GTM Recruiting & Talent Network | Scott Leese',
   description:
-    'Don’t hire a resume—hire from our network. Curated GTM matchmaking and executive search for Founding AEs, RevOps, and VPs of Sales across Scott Leese’s 392.5K+ operator ecosystem.',
+    'Don’t hire a resume—hire from our network. Curated GTM matchmaking and executive search for Founding AEs, RevOps, and VPs of Sales across Scott Leese’s 406.5K+ operator ecosystem.',
 };
 
 const MATCH_STEPS = [
@@ -18,7 +18,7 @@ const MATCH_STEPS = [
   {
     step: 'Step 02',
     title: 'Bench Matching & Targeted Search',
-    desc: 'We tap The SLC Talent Bench—an active, private network fed daily by Scott’s 134,000+ LinkedIn following, Surf & Sales alumni, and Thursday Night Sales operators—paired with targeted GTM recruiting.',
+    desc: 'We tap The SLC Talent Bench—an active, private network fed daily by Scott’s 227K+ Instagram and 134K+ LinkedIn audience, Surf & Sales alumni, and Thursday Night Sales operators—paired with targeted GTM recruiting.',
   },
   {
     step: 'Step 03',
@@ -45,19 +45,19 @@ export default function TalentBenchPage() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-[#111111]/65 font-light leading-relaxed max-w-3xl mb-10 md:mb-12">
-            Every week, top-performing Founding AEs, RevOps architects, and VPs of Sales across my 392.5K+ B2B ecosystem reach out looking for their next startup—while founders ask me who to hire. The SLC Talent Bench connects the two.
+            Every week, top-performing Founding AEs, RevOps architects, and VPs of Sales across my 406.5K+ social and B2B ecosystem (227K on Instagram &amp; 134K on LinkedIn) reach out looking for their next startup—while founders ask me who to hire. The SLC Talent Bench connects the two.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 md:mb-16">
             <a
               href="#portal"
-              className="px-6 sm:px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
+              className="shrink-0 whitespace-nowrap px-6 sm:px-8 py-4 bg-[#111111] hover:bg-[#333333] text-white text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
             >
               Hire From The Bench (Founders &amp; VCs) &rarr;
             </a>
             <a
               href="#apply-bench"
-              className="px-6 sm:px-8 py-4 border border-black/20 hover:border-[#111111] bg-white text-[#111111] text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
+              className="shrink-0 whitespace-nowrap px-6 sm:px-8 py-4 border border-black/20 hover:border-[#111111] bg-white text-[#111111] text-xs uppercase tracking-[0.18em] font-medium text-center transition-colors"
             >
               Join The Bench (Candidates)
             </a>
@@ -66,27 +66,27 @@ export default function TalentBenchPage() {
           {/* Metrics Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-black/10">
             <div>
-              <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">392.5K+</div>
+              <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">406.5K+</div>
               <div className="text-[0.65rem] uppercase tracking-[0.2em] text-[#111111]/50 font-medium">
-                Combined B2B Ecosystem
+                Total Operator Ecosystem
+              </div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">227K+</div>
+              <div className="text-[0.65rem] uppercase tracking-[0.2em] text-[#111111]/50 font-medium">
+                Instagram (@thescottleese)
               </div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">134K+</div>
               <div className="text-[0.65rem] uppercase tracking-[0.2em] text-[#111111]/50 font-medium">
-                LinkedIn GTM Reach
+                LinkedIn GTM Network
               </div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">200+</div>
               <div className="text-[0.65rem] uppercase tracking-[0.2em] text-[#111111]/50 font-medium">
                 Startups &amp; VCs Served
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-serif text-[#111111] mb-1">$0→$25M</div>
-              <div className="text-[0.65rem] uppercase tracking-[0.2em] text-[#111111]/50 font-medium">
-                Stage-Matched Operators
               </div>
             </div>
           </div>
